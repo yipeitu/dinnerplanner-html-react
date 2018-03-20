@@ -6,12 +6,14 @@ import Dishes from '../Dishes/Dishes';
 class SelectDish extends Component {
   render() {
     return (
-      <div className="SelectDish">
-        <h2>This is the Select Dish screen</h2>
-        
+      <div className="SelectDish row flex-xl-nowrap">
         {/* We pass the model as property to the Sidebar component */}
-        <Sidebar model={this.props.model}/>
-        <Dishes/>
+        <div className="col-sm-4 bd-sidebar">
+          <Sidebar model={this.props.model}/>
+        </div>
+        <div className="col-sm-8 bd-content">
+          <Dishes/>
+        </div>
       </div>
     );
   }
